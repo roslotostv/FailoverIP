@@ -1,0 +1,16 @@
+root@guest:/home/*user*# curl -u "#":"Q" https://robot-ws.your-server.de/failover/176.9.67.87 -d active_server_ip=176.9.83.69
+{"failover":{"ip":"176.9.67.87","netmask":"255.255.255.255","server_ip":"176.9.191.114","server_number":227618,"active_server_ip":"176.9.83.69"}}
+root@guest:/home/*user*# date
+Ср. дек.  7 03:37:01 MSK 2016
+root@guest:/home/*user*# date
+Ср. дек.  7 03:40:17 MSK 2016
+root@guest:/home/*user*# curl -u "#":"Q" https://robot-ws.your-server.de/failover/176.9.67.87
+{"failover":{"ip":"176.9.67.87","netmask":"255.255.255.255","server_ip":"176.9.191.114","server_number":227618,"active_server_ip":"176.9.83.69"}}
+root@guest:/home/*user*# date
+Ср. дек.  7 03:44:32 MSK 2016
+root@guest:/home/*user*# date
+Ср. дек.  7 03:56:15 MSK 2016
+root@guest:/home/*user*# curl -u "#":"Q" https://robot-ws.your-server.de/failover/176.9.67.87 -d active_server_ip=176.9.191.114
+{"failover":{"ip":"176.9.67.87","netmask":"255.255.255.255","server_ip":"176.9.191.114","server_number":227618,"active_server_ip":"176.9.191.114"}}
+root@guest:/home/*user*# curl -u "#":"Q" https://robot-ws.your-server.de/failover/176.9.67.87
+{"failover":{"ip":"176.9.67.87","netmask":"255.255.255.255","server_ip":"176.9.191.114","server_number":227618,"active_server_ip":"176.9.191.114"}}
